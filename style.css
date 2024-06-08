@@ -1,0 +1,32 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 80px;
+}
+
+.header {
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+}
+
+.body {
+  background-color: aqua;
+}
+
+.content1 {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.pp {
+  width: 100px;
+}
+
+.text {
+  width: 200px;
+}
