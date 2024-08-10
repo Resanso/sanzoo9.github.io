@@ -44,10 +44,4 @@ document.getElementById('upload').addEventListener('change', function(event) {
     reader.readAsDataURL(file);
 });
 
-document.getElementById('download').addEventListener('click', function() {
-    const canvas = document.getElementById('imageCanvas');
-    const link = document.createElement('a');
-    link.download = 'processed-image.png';
-    link.href = canvas.toDataURL('image/png');
-    link.click();
-});
+
