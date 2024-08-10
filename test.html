@@ -1,73 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myweb</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="#">
-          <img src="img/logo.png" />
-        </a>
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="youtube.com">SATU</a></li>
-          <li><a href="#">DUA</a></li>
-          <li><a href="#">TIGA</a></li>
-          <li><a href="#">EMPAT</a></li>
-        </ul>
-      </div>
-      <input
-        id="dropdown"
-        class="input-box"
-        type="checkbox"
-        style="display: none"
-      />
-      <label for="dropdown" class="dropdown">
-        <span class="hamburger">
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
-        </span>
-      </label>
-      <div class="sidebar">
-        <h1>MENU</h1>
-        <ul>
-          <li><a href="#">SATU</a></li>
-          <li><a href="#">DUA</a></li>
-          <li><a href="#">TIGA</a></li>
-          <li><a href="#">EMPAT</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header class="container">
-      <div class="content">
-        <h1>Hi, I'm <span>Resan</span></h1>
-        <p
-          id="typing-paragraph
-        
-        "
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          inventore illum atque blanditiis error facilis esse nobis deserunt
-          totam quasi velit consequatur animi eius assumenda perspiciatis,
-          dignissimos enim labore laborum?m
-        </p>
-      </div>
-      <div class="image">
-        <img src="logo.png" />
-      </div>
-    </header>
-    <script src="script.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Template Processor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #canvas-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+            background-image: url('tmplt.png'); /* Path to your template image */
+            background-size: cover;
+            border: 1px solid #000;
+        }
+        #imageCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Uplod sini gambar twibon lo bg</h1>
+<input type="file" id="upload" accept="image/*"><br><br>
+<div id="canvas-container">
+    <canvas id="imageCanvas" width="500" height="500"></canvas>
+</div>
+<br>
+<button id="download">download sini bg</button>
+
+<script src="script.js"></script>
+
+</body>
 </html>
