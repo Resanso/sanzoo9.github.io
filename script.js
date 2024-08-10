@@ -5,19 +5,25 @@ document.getElementById('upload').addEventListener('change', function(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
 
+    // Define higher resolution
+    const scaleFactor = 2; // Example: doubling the resolution
+    const canvasWidth = 500 * scaleFactor;
+    const canvasHeight = 500 * scaleFactor;
+
+    // Set canvas size
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+
     reader.onload = function(e) {
         img.src = e.target.result;
         img.onload = function() {
-            const canvasWidth = canvas.width;
-            const canvasHeight = canvas.height;
-
             // Set rotation (in degrees) and scale factor
             const rotation = -12;  // Example: -12 degrees
-            const scale = 0.32;    // Example: scale factor
+            const scale = 0.32 * scaleFactor; // Scale factor adjusted for higher resolution
 
             // Set manual position (X and Y coordinates) where the image should be drawn
-            const xPos = 90;  // X position
-            const yPos = 120; // Y position
+            const xPos = 90 * scaleFactor;  // X position
+            const yPos = 120 * scaleFactor; // Y position
 
             // Clear the canvas
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
